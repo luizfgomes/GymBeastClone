@@ -17,4 +17,17 @@ public class CharacterAnimatorController : MonoBehaviour
     {
         _animator.SetBool("Run", _characterMovement.IsRunning);
     }
+
+    private void Update ()
+    {
+        if ( Input.GetButtonDown("Fire1") )
+        {
+            PunchAnimation();
+        }
+    }
+
+    private void PunchAnimation()
+    {
+        _animator.SetTrigger("Punch");
+    }
 }
